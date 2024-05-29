@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum GameMode
 {
@@ -89,8 +90,9 @@ public class MissionDemolition : MonoBehaviour
 
 		if (level == levelMax)
 		{
-			level = 0;
+			SceneManager.LoadScene("End_Scene");
 		}
+
 		StartLevel();
 	}
 
